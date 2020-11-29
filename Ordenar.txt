@@ -1,0 +1,22 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+        public static void main(String[] args) {
+            //int[] lista = new int[10];
+            int lista[] = {13,4,6,2,7,90,43,56,44,33,21};
+        for(int i=0;i<(lista.length-1);i++){
+            for(int j=i+1;j<lista.length;j++){
+                if(lista[i]>lista[j]){
+                    //Intercambiamos valores
+                    int variableauxiliar=lista[i];
+                    lista[i]=lista[j];
+                    lista[j]=variableauxiliar;
+                }
+            }
+        }
+            for(int j=lista.length-1;j>0;j--){
+                System.out.println(lista[j]);
+            }
+    }
+}
