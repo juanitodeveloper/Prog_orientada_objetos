@@ -1,0 +1,241 @@
+package universidad;
+
+import java.util.Scanner;
+
+public class Universidad {
+
+    
+    public static void main(String[] args) {
+        
+       Scanner rd=new Scanner(System.in);
+       Alumno al=new Alumno();
+       al.setNombre("German");
+       Asignatura cla=new Asignatura();
+               cla.setNombreclase("Programacion a objetos");
+       
+       
+      /* System.out.println(al.getCuenta());
+        
+        ArrayList<Alumno> alumnos=new ArrayList<>();
+        
+ 
+      
+        for(Alumno alumno: alumnos){
+            System.out.println(alumno);
+      }
+        
+        
+        
+        
+        ArrayList<String> Nombres=new ArrayList<String>();
+        Nombres.add("Victoria");
+        Nombres.add("Vanessa");
+        Nombres.add("German");
+        System.out.println(Nombres.contains("Luis"));
+        System.out.println(Nombres.indexOf("Vanessa"));
+        Nombres.add(1, "Luis");
+        
+        for(String nombre: Nombres){
+            System.out.println(nombre);
+            
+        }
+        for(int x=0; x<Nombres.size();x++){
+            System.out.println(Nombres.get(x));
+        }
+        
+        */
+      Alumno alumno[];
+      alumno=new Alumno[5];
+      
+      alumno[0]=al;
+      alumno[0].getNombre();
+      System.out.println(alumno[0].toString());
+      System.out.println(cla.toString());
+      
+    }
+    
+    public static void imprimirInfor(Alumno al){
+        System.out.println("Cuenta: "+al.getCuenta()+" Nombre: "+al.getNombre());
+        
+    }
+    
+}
+
+//clase principal
+
+package universidad;
+
+
+public class Alumno {
+    private String nombre;
+    private int edad;
+    private double estatura;
+    private String cuenta;
+    private String telefono;
+    
+    
+   /* public Alumno(String cuenta) {
+        this.cuenta = cuenta;
+    }*/
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public double getEstatura() {
+        return estatura;
+    }
+
+    public void setEstatura(double estatura) {
+        this.estatura = estatura;
+    }
+
+    public String getCuenta() {
+        return cuenta;
+    }
+
+    public void setCuenta(String cuenta) {
+        this.cuenta = cuenta;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+   
+    @Override
+    public String toString(){
+       return "Alumno{"+
+               "Nombre= '"+nombre+'\''+
+               ", Edad= "+edad+
+               ", Estaruta= "+estatura+
+               ", Cuenta= '"+cuenta+'\''+
+               ", Telefono= '"+telefono+'\''+'}';
+       
+   
+    }
+    
+    
+    
+}
+
+//alumno
+
+package universidad;
+
+import java.util.ArrayList;
+
+
+public class Asignatura {
+    private String codigoclase;
+    private String nombreclase;
+    private String horarioclase;
+    private int capacidad; 
+    
+   Alumno al=new Alumno();
+   ArrayList<Alumno> alumnos=new ArrayList<>();
+   
+    
+
+    public String getCodigoclase() {return codigoclase;}
+
+    public void setCodigoclase(String codigoclase) {this.codigoclase = codigoclase;}
+
+    public String getNombreclase() {return nombreclase;}
+
+    public void setNombreclase(String nombreclase) {this.nombreclase = nombreclase; }
+
+    public String getHorarioclase() {return horarioclase; }
+
+    public void setHorarioclase(String horarioclase) { this.horarioclase = horarioclase; }
+
+    public int getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    @Override
+    public String toString() {
+        return "Asignatura{" + "codigoclase=" + codigoclase + ", nombreclase=" + nombreclase + ", horarioclase=" + horarioclase + ", capacidad=" + capacidad + '}';
+    }
+    
+    
+    
+}
+
+//Asignatura
+
+package universidad;
+
+
+public class Catedratico {
+    private String nombrecatedratico;
+    private String codigocatedrarico; 
+    private String Claseimpartidas; 
+    private String horariosdeclase; 
+
+    public String getNombrecatedratico() {
+        return nombrecatedratico;
+    }
+
+    public void setNombrecatedratico(String nombrecatedratico) {
+        this.nombrecatedratico = nombrecatedratico;
+    }
+
+    public String getCodigocatedrarico() {
+        return codigocatedrarico;
+    }
+
+    public void setCodigocatedrarico(String codigocatedrarico) {
+        this.codigocatedrarico = codigocatedrarico;
+    }
+
+    public String getClaseimpartidas() {
+        return Claseimpartidas;
+    }
+
+    public void setClaseimpartidas(String Claseimpartidas) {
+        this.Claseimpartidas = Claseimpartidas;
+    }
+
+    public String getHorariosdeclase() {
+        return horariosdeclase;
+    }
+
+    public void setHorariosdeclase(String horariosdeclase) {
+        this.horariosdeclase = horariosdeclase;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Catedratico{" + "nombrecatedratico=" + nombrecatedratico + ", codigocatedrarico=" + codigocatedrarico + ", Claseimpartidas=" + Claseimpartidas + ", horariosdeclase=" + horariosdeclase + '}';
+    }
+
+    
+    
+    
+    
+}
+
+//Catedratico
