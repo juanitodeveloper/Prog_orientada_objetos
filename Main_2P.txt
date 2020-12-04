@@ -1,0 +1,31 @@
+package Clase;
+
+import javax.swing.*;
+import java.util.Scanner;
+/*Funcion que recibe una cadena de caracter, dara la cantidad de caractares en esa cadena*/
+public class Main {
+
+    public static void main(String[] args) {
+    Scanner rd=new Scanner(System.in);
+        System.out.println(("Ingrese cadena de texto: "));
+        String cadenat= rd.nextLine();
+        System.out.println("Ingrese letra para ver cuantas veces se repite: ");
+        char caden=rd.next().charAt(0);
+        int suma=buscarcaracter(cadenat, caden);
+        System.out.println("Su letra "+caden+" se repite "+suma+" veces"+" en la cadena "+cadenat);
+
+    }
+
+public static int buscarcaracter(String val, char c){
+        int cont=0;
+            char arreglo[]=val.toCharArray();
+        for(int i=0; i<arreglo.length; i++){
+            if(arreglo[i]==c){
+                cont++;
+            }
+        }
+return cont;
+
+}
+}
+
